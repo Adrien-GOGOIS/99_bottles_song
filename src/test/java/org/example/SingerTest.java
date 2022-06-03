@@ -308,7 +308,7 @@ public class SingerTest {
 
     @Test
     void should_display_the_same_song() {
-        Singer jane = new Singer();
-        Assertions.assertThat(jane.singTheSong()).isEqualTo(actualSong);
+        Song bottleOfBeers = new Song();
+        Assertions.assertThat(bottleOfBeers.sing()).isEqualTo(actualSong);
     }
 }
