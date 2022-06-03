@@ -2,8 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-
-        SongCreator bottleOfBeer = new SongCreator();
-        Singer bob = new Singer(bottleOfBeer);
+        Singer jane = new Singer();
+        System.out.println(jane.singTheSong());
     }
 }

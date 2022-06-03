@@ -1,13 +1,18 @@
 package org.example;
 
 public class Singer {
-    final SongCreator songCreator;
-    public Singer(SongCreator songCreator) {
-        this.songCreator = songCreator;
-    }
+    int numberOfBeers = 99;
+    StringBuilder bottleOfBeers = new StringBuilder();
+    public String singTheSong() {
+        while (numberOfBeers >= 0) {
+            Verse bottleOfBeersVerses = new Verse();
 
-    public String sing() {
-        return songCreator.bottleOfBeer();
+            bottleOfBeers.append(bottleOfBeersVerses.verseConstructor(numberOfBeers));
+
+            numberOfBeers--;
+        }
+
+        return bottleOfBeers.toString();
     }
 }
 
