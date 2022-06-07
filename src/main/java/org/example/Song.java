@@ -7,7 +7,15 @@ public class Song {
         while (numberOfBeers >= 0) {
             Verse bottleOfBeersVerses = new Verse();
 
-            bottleOfBeers.append(bottleOfBeersVerses.verseConstructor(numberOfBeers));
+            if (numberOfBeers == 0) {
+                bottleOfBeers.append(bottleOfBeersVerses.verseConstructor("dernier", numberOfBeers));
+            } else if (numberOfBeers == 1) {
+                bottleOfBeers.append(bottleOfBeersVerses.verseConstructor("avant-dernier", numberOfBeers));
+            } else if (numberOfBeers == 2) {
+                bottleOfBeers.append(bottleOfBeersVerses.verseConstructor("avant-avant-dernier", numberOfBeers));
+            } else {
+                bottleOfBeers.append(bottleOfBeersVerses.verseConstructor("normal", numberOfBeers));
+            }
 
             numberOfBeers--;
         }
