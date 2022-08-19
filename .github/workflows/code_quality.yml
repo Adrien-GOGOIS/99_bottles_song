@@ -10,14 +10,21 @@ jobs:
   qodana:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Qodana - Code Inspection
+        uses: JetBrains/qodana-action@v2.0-eap
+      - uses: actions/upload-artifact@v2
         with:
-          fetch-depth: 0
-      - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@v2022.2.1
+          path: ${{ github.workspace }}/qodana
+      - uses: actions/download-artifact@v2
+        id: download
+        with:
+          name: 'artifact'
+          path: qodana
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ runner.temp }}/qodana/results/report
+          publish_dir: ./qodana/results/report
           destination_dir: ./
