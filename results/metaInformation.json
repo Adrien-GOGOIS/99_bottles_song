@@ -1,0 +1,18 @@
+{
+  "total": 0,
+  "tools inspection": {
+    "Code Inspection": 0
+  },
+  "attributes": {
+    "vcs": {
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/Adrien-GOGOIS/99_bottles_song",
+        "revisionId": "9c9d2e2c896c74c141386571b6cc43707271a57f",
+        "branch": "main"
+      }
+    },
+    "deviceId": "200820300000000-56d3-da85-384e-b34d644d8af9",
+    "jobUrl": "https://github.com/Adrien-GOGOIS/99_bottles_song/actions/runs/2889939705",
+    "repoUrl": "https://github.com/Adrien-GOGOIS/99_bottles_song"
+  }
+}
