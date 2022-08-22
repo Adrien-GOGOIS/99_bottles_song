@@ -4,7 +4,7 @@ public class Song {
     int numberOfBeers = 99;
     StringBuilder bottleOfBeers = new StringBuilder();
     public String sing() {
-        while (numberOfBeers >= 0) {
+        while numberOfBeers >= 0) {
             Verse bottleOfBeersVerses = new Verse();
 
             if (numberOfBeers == 0) {
